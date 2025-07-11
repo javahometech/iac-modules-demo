@@ -7,7 +7,7 @@ resource "aws_s3_bucket_public_access_block" "block_all" {
 }
 
 resource "aws_s3_bucket_policy" "main" {
-  bucket = ar.bucket_name
+  bucket = var.bucket_name
   policy = var.policy_json
   depends_on = [aws_s3_bucket_public_access_block.block_all]
 }
