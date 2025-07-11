@@ -1,6 +1,5 @@
 variable "bucket_name" {
 }
 variable "tags" {
-    type = map(string)
-    default = {}
+    type = string
 }
