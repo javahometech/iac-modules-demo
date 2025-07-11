@@ -5,3 +5,10 @@ resource "aws_s3_bucket_public_access_block" "block_all" {
   block_public_policy     = false
   restrict_public_buckets = false
 }
+
+resource "aws_s3_bucket_policy" "main" {
+  bucket = aws_s3_bucket.main.id
+  policy = var.policy_json
+  depends_on = [aws_s3_bucket_public_access_block.block_all]
+}
+
