@@ -6,5 +6,6 @@ variable "tags" {
 
 variable "policy_json" {
     type = string
+    default = ""
 }
 
