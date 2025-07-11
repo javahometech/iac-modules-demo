@@ -4,6 +4,6 @@ resource "aws_s3_bucket" "main" {
 }
 
 resource "aws_s3_bucket_policy" "main" {
-  bucket = aws_s3_bucket.this.id
+  bucket = aws_s3_bucket.main.id
   policy = var.policy_json
 }
